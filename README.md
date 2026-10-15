@@ -31,9 +31,9 @@ First, I imported and loaded the dataset into Power BI. Then, using Power Query 
 
 Next, I want to obtain an idea of the relation between the Years of Experience and the Job Position level (e.g. Entry Level). To do so, I visualised the average Years of Experience and column and the Job Position Level column using a Treemap and a Bar chart.
 
-![image](https://user-images.githubusercontent.com/113103161/206879491-99428656-0975-446a-ae6a-c0e13c05c677.png)
+<!-- TODO your screenshot: ![Average years of experience by job position level (treemap)](images/01-experience-by-job-level-treemap.png) -->
 
-![image](https://user-images.githubusercontent.com/113103161/206880289-148148c7-bd3f-4c28-a751-5aecde2e6a21.png)
+<!-- TODO your screenshot: ![Average years of experience by job position level (bar)](images/02-experience-by-job-level-bar.png) -->
 
 
 It is observed that the average experience years required for a Executive level job is around 15 years and you can land an Internship with less than a year experience.
@@ -43,7 +43,7 @@ At 15.17 years, Executive had the highest Average of Years of Experience and was
 
 Next, we are interested in observing the trend of job postings in time. So we visualise the Count of Job Posting IDs over Job Posting Date as time axis.
 
-![image](https://user-images.githubusercontent.com/113103161/206880032-a93f49dd-92a1-4b6a-8eab-fb8257cf6d44.png)
+<!-- TODO your screenshot: ![Count of job postings over time](images/03-posting-trends-over-time.png) -->
 
 It is evident that the first quarter of 2020 the number of job positions has been the lowest due to the rise of Covid-19. Between January 2017 and December 2021, Mid-Senior level had the largest increase in Count of Job Postings (174.48%) while Internship had the largest decrease (33.33%). The most recent Count of Job Postings anomaly was in September 2021, when Director had a low of 1. Count of Job Postings for Internship started trending up on February 2021, rising by 300.00% (3) in 4 months.
 
@@ -51,7 +51,7 @@ It is evident that the first quarter of 2020 the number of job positions has bee
 
 Now it's time to dig deeper into the dataset to gain info about data related jobs: Data Scientist, Data Analyst, Data Engineer, Machine Learning Engineer, and Data Science Manager. We start by analysing the number of job postings for each job title.  
 
-![image](https://user-images.githubusercontent.com/113103161/206880551-48fd4ce7-b15e-4746-a93a-ffbd5cf3be5d.png)
+<!-- TODO your screenshot: ![Count of job postings by data job title](images/04-job-title-posting-count.png) -->
 
 At 3,462, Data Engineer had the highest Count of Job Postings and was 14,952.17% higher than Data Science Manager, which had the lowest Count of Job Postings at 23. Data Engineer accounted for 47.74% of Count of Job Postings. Across all 5 Job Titles, Count of Job Postings ranged from 23 to 3,462.
 
@@ -59,7 +59,7 @@ At 3,462, Data Engineer had the highest Count of Job Postings and was 14,952.17%
 
 In the next step of our EDA, we are interested in identifying influential factors on job market trend. One of the integral parts of a job is the compensation. Here, we analyse the effect of years of experience on each jab's offered salary.
 
-![image](https://user-images.githubusercontent.com/113103161/206910657-8bdc8967-492d-4d17-b95f-47d110267d7d.png)
+<!-- TODO your screenshot: ![Years of experience vs offered salary](images/05-experience-vs-salary.png) -->
 
 It is obvious that the more the years of experience, the highere salary. Also, we observe that the Data Analysts earn the least compared to other data related jobs. A bit dissapointing! However, we must keep in mind that more than 93% of values for Max and Min pay columns (which we used to calculate the Average pay for each job title) were null values, so we connat draw any major concolusions.
 
@@ -69,7 +69,7 @@ In our second analysis step we continue to apply our Power BI skills to extract 
 
 Key Insights we have Identified So Far:
 - Job postings are gradually increasing in number.
-- Data Engineers, Data Scientists, and Analysts are indemand!
+- Data Engineers, Data Scientists, and Analysts are in demand!
 - Tech industries need data science roles the most.
 - Salaries are trending upward as expected.
 
@@ -89,32 +89,32 @@ Using only the two columns Job Posting ID and Job Skills, we creat a second Tabl
 
 Next, I visualised the count of Job Skills to gain an innitial idea of the most required skills.
 
-![image](https://user-images.githubusercontent.com/113103161/206914484-eebba5da-0fd9-466b-92ad-0109a156168f.png)
+<!-- TODO your screenshot: ![Count of job skills](images/06-job-skill-count.png) -->
 
 We observe that the count of Job Skills was highest for python at 3,931, followed by sql and cloud. Python accounted for 7.44% of Count of Job Skills. Across all 165 Job Skills, Count of Job Skills ranged from 1 to 3,931.
 
 ### Skill Likelihood in Job Posting
 Here, I used DAX to identify the probability of a certain skill occurance in a job posting. To do so, we use the basic probability principles. The probability of a certain skill existing in a job ad, can be calculated at the count of all the job postings that contain this skill over the total number of all job postings. Therefor, I created three measures called ```Skill Count``` , ```Posting Count```, and ```% of Skill in Posting``` that calculated the required chance. Then I created a Matrix to visualise the result. I also added a slicer, so that it would be easier to filter for a specific skill.
 
-![image](https://user-images.githubusercontent.com/113103161/206923866-5e51ade3-afa3-4ad6-9fe5-6d27b6c0d723.png)
+<!-- TODO your screenshot: ![Skill likelihood matrix with slicer](images/07-skill-likelihood-matrix.png) -->
 
 
 ### Trends in skills over time
 Next, let's analyse the trend of skills in job postings over time. This can give us a good idea of what skills are more in demand in certion time periods. We want a a time-series graph, so we use a Line Chart to visualise the ```% Skill in Postin``` over time by using ```Posting Date``` and use ```Job Titles``` from our ```Job Skills``` table as a legend. The result is the following graph:
 
-![image](https://user-images.githubusercontent.com/113103161/206929608-faa75cd5-996b-4d7c-ab00-93e062a196fe.png)
+<!-- TODO your screenshot: ![Skills in demand over time](images/08-skills-over-time.png) -->
 
-We can observe that although the metrics have fluctuations on a short-term basis, the top 10 skills maintain at consisted deman over the past few years. Moreover, across Job Skills, spark had the most interesting recent trend and started trending down on 2017, falling by 6.61% (1.29%) in 4 years.
+We can observe that although the metrics have fluctuations on a short-term basis, the top 10 skills maintain at consisted demand over the past few years. Moreover, across Job Skills, spark had the most interesting recent trend and started trending down on 2017, falling by 6.61% (1.29%) in 4 years.
 
 ### Deep dive into key job descriptions
 
 Next, we are interested in exploring the companies and industries that are looking for data-related roles. To do this, I visualised the Average years of experience and posting count by job position level and company industry in a scatter plot, along with a table containing posting count, job title and company name. This way, I can find out which industry and company is mostly looking for which job position level and with how many years of experience. 
 
-![image](https://user-images.githubusercontent.com/113103161/208241963-80cf74e8-e0bc-48f4-aaae-e4dc00c386a4.png)
+<!-- TODO your screenshot: ![Industry scatter: experience vs posting count](images/09-industry-scatter.png) -->
 
 It is evident that there is a large demand for Mid-senior scientists with an average of 5.37 years of experience in the internet industry.
 
-![image](https://user-images.githubusercontent.com/113103161/208242227-552452a4-2289-4ec0-91c6-c0ec820c1574.png)
+<!-- TODO your screenshot: ![Company-level posting table](images/10-company-table.png) -->
 
 Using the table, we observe that the company Toptal is hiring a large number of Data Engineers (994) and Data Scientist (673). Staffing & Recruiting had the highest Average of Years of Experience (4.96) and Internet had the highest Posting Count (5052).
 
@@ -127,13 +127,13 @@ We decide to summerise our findings in three pages Jobs, Skills, Company, introd
 
 ### Designing a dashboard layout
 
-![image](https://user-images.githubusercontent.com/113103161/208248501-967ac9a6-3c32-4360-91a7-2be5c6621cfa.png)
+<!-- TODO your screenshot: ![Dashboard layout / background design](images/11-dashboard-layout.png) -->
 
 ### Exploring top skills for jobs
-![image](https://user-images.githubusercontent.com/113103161/208248548-7129d6c4-5675-4016-bc26-71a25f094ac8.png)
+<!-- TODO your screenshot: ![Top skills for jobs page](images/12-jobs-page-top-skills.png) -->
 
 ### Salary gauge for companies
-![image](https://user-images.githubusercontent.com/113103161/208248566-b31530ec-c010-402d-bf81-398b4bd1d638.png)
+<!-- TODO your screenshot: ![Salary gauge for companies](images/13-company-salary-gauge.png) -->
 
 ## Adding interactivity with bookmarks
 
@@ -141,16 +141,16 @@ With the help of icons and bookmarking them, I was able to make my dashboard eve
 
 
 - Home Page:
-![image](https://user-images.githubusercontent.com/113103161/208249231-c3bd58cb-5bd2-4d85-8266-9e3c187756ef.png)
+<!-- TODO your screenshot: ![Dashboard - Home page](images/14-dashboard-home.png) -->
 
 - Jobs Page:
-![image](https://user-images.githubusercontent.com/113103161/208249245-e5325079-fe6d-46d7-8920-5782e6ec4fcc.png)
+<!-- TODO your screenshot: ![Dashboard - Jobs page](images/15-dashboard-jobs.png) -->
 
 - Skills Page:
-![image](https://user-images.githubusercontent.com/113103161/208249267-de393e15-bbe3-4c94-8de1-a08a83c00cbb.png)
+<!-- TODO your screenshot: ![Dashboard - Skills page](images/16-dashboard-skills.png) -->
 
 - Company Page:
-![image](https://user-images.githubusercontent.com/113103161/208249285-e2a3aacd-28a5-4228-a4b2-a692330349c6.png)
+<!-- TODO your screenshot: ![Dashboard - Company page](images/17-dashboard-company.png) -->
 
 
 
