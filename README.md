@@ -51,7 +51,7 @@ To analyze hiring trends over time, I plotted the Count of Job Posting IDs again
 - Job postings hit the lowest point in Q1 2020 due to the rise of Covid pandemic.
 - From Q3 2020 - Q4 2021, the job posting counts for all levels fluctuated significantly, though the overall demand ended on an upward trend compared to previous years.
 
-### Data Related Job Roles
+### Data Role Distribution
 
 Next, I filtered the dataset to focus specifically on these roles: Data Scientist, Data Analyst, Data Engineer, Machine Learning Engineer, and Data Science Manager.
 
