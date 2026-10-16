@@ -1,157 +1,155 @@
-# Case-Study-Analyzing-Job-Market-Data-in-Power-BI
-
-* You can read the full article on this project [here](https://www.linkedin.com/pulse/analyzing-job-market-data-power-bi-negar-loloshahvar).
+# Analyzing-Data-Science-Job-Market-in-Power-BI
 
 
-In this Power BI case study, we’ll explore a real-world job posting dataset to uncover insights for a fictional recruitment company called DataSearch. We’ll use Power Query to investigate and clean the data to find out what skills are most in-demand for data scientists, data analysts, and data engineers. We’ll then use DAX to build insightful visualizations of our findings. Finally, We’ll bring it all together using everything Power BI has to offer to create a business dashboard so that we can answer questions for the DataSearch team.
+### Project Overview
+In this Power BI case study, I analyzed a dataset of over 25,000 job postings to uncover key skills and hiring trends in data science for DataSearch, a fictional recruitment agency. Using Power Query, I cleaned and prepped the 17-column dataset to identify high-demand skills for Data Scientists, Data Analysts, and Data Engineers. I then used DAX to build dynamic metrics and created an interactive business dashboard to deliver actionable recruitment insights for the DataSearch team.
 
 ### Project Objectives
-Investigate market trends for data science roles
+Investigate market trends for different data science roles.
 
-* The context
-An employee recruiting firm DataSearch,needs to uncover job trends
-* Thetask
-Discover trends in jobs and skills within the data science industry
-* The dataset
-Factitious collection of key details from job postings. The Dataset contains data about 25,114 job postings and 17 columns information about each job posting (Title, Date, Industry, Skills, ... )
+* The context:
+DataSearch, a recruitment agency needed actionable insights into the evolving data market.
+* The task:
+Discover trends and in-demand skills within the data science industry.
+* The dataset:
+Analyze 25,114 job postings containing 17 key attributes about each job posting (Title, Date, Industry, Skills, ... ).
 
-### Data analysis Pipeline:
-- 1. Checking Data
-- 2. Exploring Data
-- 3. Analyse and Visualise Data
-- 4. Dashboarding
-- 5. Communicating Insights
+### Work Journey:
+1. Checking and Cleaning Data
+3. Exploring Data
+4. Analyzing and Visualizing Data
+5. Dashboarding
+6. Communicating Insights
 
-## Step 1: Exploratory Analysis
-We'll start this Power BI case study by importing and cleaning the job posting dataset using Power Query. Once we’ve done this, it’s time to do some initial data exploration.
+## Step 1: Exploratory Data Analysis
 
-First, I imported and loaded the dataset into Power BI. Then, using Power Query tool, 93% of values for Max and Min pay column were null values. This indicates that more than 90% of companies do not mention Maximum and Minimum of salary in their job postings. After than by sorting the Number of applicant column in a decending order, I understood that the most popular industries were Marketting and Adevrtisement, Computer Software, and Broadcast Media, respectively.
+I started this case study by importing the job posting dataset into Power BI and cleaning it using Power Query. During initial exploration, I found that **93% of the values in the Max Pay and Min Pay columns were null**, indicating that the majority of companies do not disclose salary ranges in their job postings.
+Next, by sorting job postings by applicant volume in descending order, I identified the three most popular industries:
+Marketing & Advertising,
+Computer Software, and
+Broadcast Media.
 
-### More Experienced, Higher Level
+### Higher Experience, Higher Level
 
-Next, I want to obtain an idea of the relation between the Years of Experience and the Job Position level (e.g. Entry Level). To do so, I visualised the average Years of Experience and column and the Job Position Level column using a Treemap and a Bar chart.
-
-<!-- TODO your screenshot: ![Average years of experience by job position level (treemap)](images/01-experience-by-job-level-treemap.png) -->
-<img width="1128" height="475" alt="Count of job posting by job title vor" src="https://github.com/user-attachments/assets/de3f8f83-680b-4e8c-b0e1-30f6a6e4c689" />
+To understand how required experience scales with seniority, I evaluated the relationship between the Average Years of Experience and Job Position Level using a Bar Chart.
 
 <!-- TODO your screenshot: ![Average years of experience by job position level (bar)](images/02-experience-by-job-level-bar.png) -->
+<img width="1277" height="477" alt="Avg Ex Year by Job Level vor" src="https://github.com/user-attachments/assets/ac7ff2a9-d958-44ba-b8ec-05e6ecc691a4" />
 
+- Executive Level: Required the highest average experience at 15.17 years.
+- Internship Level: Required the lowest average experience at 0.37 years (under 5 months).
+- Overall Range: Across all 6 position levels, required experience ranged from 0.37 to 15.17 years.
 
-It is observed that the average experience years required for a Executive level job is around 15 years and you can land an Internship with less than a year experience.
-At 15.17 years, Executive had the highest Average of Years of Experience and was 4,047.13% higher than Internship, which had the lowest Average of Years of Experience at 0.37 year. Moreover, across all 6 Job Position Levels, Average of Years of Experience ranged from 0.37 to 15.17 years.
-
+  
 ### Job Posting Trend Analysis
 
-Next, we are interested in observing the trend of job postings in time. So we visualise the Count of Job Posting IDs over Job Posting Date as time axis.
+To analyze hiring trends over time, I plotted the Count of Job Posting IDs against the Job Posting Date.
 
 <!-- TODO your screenshot: ![Count of job postings over time](images/03-posting-trends-over-time.png) -->
+<img width="1134" height="594" alt="Count of job post over time vor" src="https://github.com/user-attachments/assets/e25f180a-fdba-4cb5-b571-f9ea2e58a9e5" />
 
-It is evident that the first quarter of 2020 the number of job positions has been the lowest due to the rise of Covid-19. Between January 2017 and December 2021, Mid-Senior level had the largest increase in Count of Job Postings (174.48%) while Internship had the largest decrease (33.33%). The most recent Count of Job Postings anomaly was in September 2021, when Director had a low of 1. Count of Job Postings for Internship started trending up on February 2021, rising by 300.00% (3) in 4 months.
+- Job postings hit the lowest point in Q1 2020 due to the rise of Covid pandemic.
+- From Q3 2020 - Q4 2021, the job posting counts for all levels fluctuated significantly, though the overall demand ended on an upward trend compared to previous years.
 
-### Filtering for Data Related Job Titles
+### Data Related Job Roles
 
-Now it's time to dig deeper into the dataset to gain info about data related jobs: Data Scientist, Data Analyst, Data Engineer, Machine Learning Engineer, and Data Science Manager. We start by analysing the number of job postings for each job title.  
+Next, I filtered the dataset to focus specifically on these roles: Data Scientist, Data Analyst, Data Engineer, Machine Learning Engineer, and Data Science Manager.
 
 <!-- TODO your screenshot: ![Count of job postings by data job title](images/04-job-title-posting-count.png) -->
+<img width="1128" height="475" alt="Count of job posting by job title vor" src="https://github.com/user-attachments/assets/fba35c0f-74cb-48b5-82b0-8b27be48f6e4" />
 
-At 3,462, Data Engineer had the highest Count of Job Postings and was 14,952.17% higher than Data Science Manager, which had the lowest Count of Job Postings at 23. Data Engineer accounted for 47.74% of Count of Job Postings. Across all 5 Job Titles, Count of Job Postings ranged from 23 to 3,462.
+- Data Engineers dominated the space with 3,462 postings (47.7% of all data roles).
+Across all 5 filtered titles, posting volumes ranged from 23 to 3,462.
 
-### Effect of Years Experience on Salary
+### Impact of Experience on Salary
 
-In the next step of our EDA, we are interested in identifying influential factors on job market trend. One of the integral parts of a job is the compensation. Here, we analyse the effect of years of experience on each jab's offered salary.
+Finally, I examined compensation trends across data roles relative to required experience.
 
 <!-- TODO your screenshot: ![Years of experience vs offered salary](images/05-experience-vs-salary.png) -->
+<img width="1133" height="592" alt="Avg of Avg Pay and Ex year" src="https://github.com/user-attachments/assets/fe43c526-858c-4adb-b6e9-063cf5df2704" />
 
-It is obvious that the more the years of experience, the highere salary. Also, we observe that the Data Analysts earn the least compared to other data related jobs. A bit dissapointing! However, we must keep in mind that more than 93% of values for Max and Min pay columns (which we used to calculate the Average pay for each job title) were null values, so we connat draw any major concolusions.
+- Obviously, the higher the position that doesn't mean the higher the salary. **However**, because over 93% of Max and Min pay entries were missing/null, these pay averages represent a limited sample and should be interpreted with caution rather than drawn as definitive industry conclusions.
 
-## Step 2: Analyzing Market Trends
+## Step 2: Skills & Industry Analysis
 
-In our second analysis step we continue to apply our Power BI skills to extract data insights with tools like DAX and begin to build unique data visualizations.
-
-Key Insights we have Identified So Far:
-- Job postings are gradually increasing in number.
-- Data Engineers, Data Scientists, and Analysts are in demand!
-- Tech industries need data science roles the most.
-- Salaries are trending upward as expected.
-
-In our second step, we are going to analyse our data to provide insights on the following:
-
+Building on my initial EDA (Step 1 ), I used DAX modeling and specialized visualizations to analyze:
 - Correlation between skills and job title
-- Top industries and companies 
+- Top industries and companies
 - Potential recommendations
-
-We want to follow a goal-oriented approach in our analysis, so, we must keep our final purpose in mind and identify the following as we go forward in our data analysis project:
-- Key findings to focus
-- Visualizations to share
-- Communication style
-
-### Skill analysis
-Using only the two columns Job Posting ID and Job Skills, we creat a second Table called Job Skills. In the new table we remove the extra characters in the column Job Skills such as brackets [], quotes ", and extra spaces. I have also used the Trim and Clean features to remove the extra spaces in each cell. Then, we split this column into rows to seperate the list of skills for each job on a seperate row.
-
-Next, I visualised the count of Job Skills to gain an innitial idea of the most required skills.
+### Skill Extraction & Data Transformation
+To analyze individual skill demand, I created a ```Job Skill``` table using only the two columns ```Job Posting ID``` and ```Job Skills``` in Power Query from the raw dataset:
+- Cleaning: removed brackets [], quotes ", whitespace in each cell using Trim and Clean.
+- Unpivoting: Split comma-separated skill lists into individual rows for each job posting.
+  
+Next, I visualized the count of Job Skills to gain an initial idea of the top 10 demanded skills.
 
 <!-- TODO your screenshot: ![Count of job skills](images/06-job-skill-count.png) -->
+<img width="1131" height="592" alt="Top 10 job skills" src="https://github.com/user-attachments/assets/810e4f21-724e-45dc-a71f-9fda44fb8dfe" />
 
-We observe that the count of Job Skills was highest for python at 3,931, followed by sql and cloud. Python accounted for 7.44% of Count of Job Skills. Across all 165 Job Skills, Count of Job Skills ranged from 1 to 3,931.
 
-### Skill Likelihood in Job Posting
-Here, I used DAX to identify the probability of a certain skill occurance in a job posting. To do so, we use the basic probability principles. The probability of a certain skill existing in a job ad, can be calculated at the count of all the job postings that contain this skill over the total number of all job postings. Therefor, I created three measures called ```Skill Count``` , ```Posting Count```, and ```% of Skill in Posting``` that calculated the required chance. Then I created a Matrix to visualise the result. I also added a slicer, so that it would be easier to filter for a specific skill.
+### Skill Likelihood Modelling (DAX)
+To measure the exact probability of a skill appearing in a job posting, I created three measures: 
+- ```Skill Count```= count each ```Job Skills``` in Job Skill table. 
+- ```Posting Count```= count each ```Job Posting ID```in Job Posting table.
+- ```% of Skill in Posting```= ```Skill Count```/```Posting Count```.
+
+Then I created a Matrix Visual with a Slicer so it would be easier to filter for a specific skill.
 
 <!-- TODO your screenshot: ![Skill likelihood matrix with slicer](images/07-skill-likelihood-matrix.png) -->
+<img width="966" height="527" alt="Skill likelihood" src="https://github.com/user-attachments/assets/af5e3f9b-cc28-4c47-9de5-2d719f9ca4c6" />
 
 
-### Trends in skills over time
-Next, let's analyse the trend of skills in job postings over time. This can give us a good idea of what skills are more in demand in certion time periods. We want a a time-series graph, so we use a Line Chart to visualise the ```% Skill in Postin``` over time by using ```Posting Date``` and use ```Job Titles``` from our ```Job Skills``` table as a legend. The result is the following graph:
+
+### Skill Trends Over Time
+I built a Line Chart plotting ```% Skill in Posting``` against ```Posting Date```, and use ```Job Skills``` from ```Job Skill``` table as a legend. The top 10 core skills maintained steady, consistent demand over the 5-year period.
 
 <!-- TODO your screenshot: ![Skills in demand over time](images/08-skills-over-time.png) -->
+<img width="919" height="592" alt="Skill demand over time" src="https://github.com/user-attachments/assets/2ffd70ba-100c-434c-8e02-75d4ff37f694" />
 
-We can observe that although the metrics have fluctuations on a short-term basis, the top 10 skills maintain at consisted demand over the past few years. Moreover, across Job Skills, spark had the most interesting recent trend and started trending down on 2017, falling by 6.61% (1.29%) in 4 years.
+### Company & Industry Deep Dive
 
-### Deep dive into key job descriptions
-
-Next, we are interested in exploring the companies and industries that are looking for data-related roles. To do this, I visualised the Average years of experience and posting count by job position level and company industry in a scatter plot, along with a table containing posting count, job title and company name. This way, I can find out which industry and company is mostly looking for which job position level and with how many years of experience. 
+To map hiring demand to specific sectors and employers, I designed two visual layouts:
+1. Scatter Plot: Average Years of Experience vs. Company Industry, ```Job Level``` as Legend and ```Posting Count```as bubble size.
 
 <!-- TODO your screenshot: ![Industry scatter: experience vs posting count](images/09-industry-scatter.png) -->
+<img width="1022" height="576" alt="Avg year ex by industry" src="https://github.com/user-attachments/assets/cd20ae37-8a74-4894-a99b-eac1f5a6559c" />
 
-It is evident that there is a large demand for Mid-senior scientists with an average of 5.37 years of experience in the internet industry.
+
+2. Table: Posting Count by Company Name and Job Title.
 
 <!-- TODO your screenshot: ![Company-level posting table](images/10-company-table.png) -->
+<img width="384" height="549" alt="Job posting count table" src="https://github.com/user-attachments/assets/5c7b013b-703e-49aa-b19f-6bb33c93f3d6" />
 
-Using the table, we observe that the company Toptal is hiring a large number of Data Engineers (994) and Data Scientist (673). Staffing & Recruiting had the highest Average of Years of Experience (4.96) and Internet had the highest Posting Count (5052).
 
 ## Step 3: Building Dashboard
 
-Now it’s time to hand over the final deliverable. We’ll combine all of the job listing insights we’ve discovered into an interactive Power BI dashboard for the DataSearch team.
+To deliver an actionable, user-friendly report for the DataSearch recruitment team, I consolidated the analytical findings into a cohesive, three-page Power BI dashboard designed for seamless navigation and insight discovery.
 
-### Begin dashboard templates
-We decide to summerise our findings in three pages Jobs, Skills, Company, introduced in the Home page. We used template pictures for the background to make our final dashboard more organised.
-
-### Designing a dashboard layout
-
+### Home Page
+Landing page, providing user-friendly navigation across the report.
 <!-- TODO your screenshot: ![Dashboard layout / background design](images/11-dashboard-layout.png) -->
+<img width="795" height="479" alt="Home Page" src="https://github.com/user-attachments/assets/d158165b-c088-4ee9-89ff-79d536a38480" />
 
-### Exploring top skills for jobs
+
+### Job Overview Page
+Highlights hiring trend, position level, and experience requirements across filtered data roles.
 <!-- TODO your screenshot: ![Top skills for jobs page](images/12-jobs-page-top-skills.png) -->
+<img width="987" height="554" alt="Job Overview" src="https://github.com/user-attachments/assets/9ba2f409-2b58-4f0e-8572-7f49111ba2b8" />
 
-### Salary gauge for companies
+
+### Skill Overview Page
+Focuses on skill prevalence, likelihood metrics, and tech tool requirment trends.
 <!-- TODO your screenshot: ![Salary gauge for companies](images/13-company-salary-gauge.png) -->
-
-## Adding interactivity with bookmarks
-
-With the help of icons and bookmarking them, I was able to make my dashboard even more interactive. This id the final results where the icons are clickable and make working with the dashboard a lot easier for the end-user. This is the final result:
+<img width="985" height="555" alt="Skill Overview" src="https://github.com/user-attachments/assets/de1b33dc-639b-4ae1-a836-0fba2987492f" />
 
 
-- Home Page:
-<!-- TODO your screenshot: ![Dashboard - Home page](images/14-dashboard-home.png) -->
+### Company Overview Page
+Evaluates top-hiring companies, industry concentrations, and salary ranges.
 
-- Jobs Page:
-<!-- TODO your screenshot: ![Dashboard - Jobs page](images/15-dashboard-jobs.png) -->
-
-- Skills Page:
-<!-- TODO your screenshot: ![Dashboard - Skills page](images/16-dashboard-skills.png) -->
-
-- Company Page:
 <!-- TODO your screenshot: ![Dashboard - Company page](images/17-dashboard-company.png) -->
+<img width="985" height="553" alt="Company Overview" src="https://github.com/user-attachments/assets/daee636d-4be5-45ab-8021-bc5953e03fa1" />
+
+
 
 
 
