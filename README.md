@@ -32,6 +32,7 @@ First, I imported and loaded the dataset into Power BI. Then, using Power Query 
 Next, I want to obtain an idea of the relation between the Years of Experience and the Job Position level (e.g. Entry Level). To do so, I visualised the average Years of Experience and column and the Job Position Level column using a Treemap and a Bar chart.
 
 <!-- TODO your screenshot: ![Average years of experience by job position level (treemap)](images/01-experience-by-job-level-treemap.png) -->
+<img width="1128" height="475" alt="Count of job posting by job title vor" src="https://github.com/user-attachments/assets/de3f8f83-680b-4e8c-b0e1-30f6a6e4c689" />
 
 <!-- TODO your screenshot: ![Average years of experience by job position level (bar)](images/02-experience-by-job-level-bar.png) -->
 
