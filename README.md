@@ -68,7 +68,7 @@ Finally, I examined compensation trends across data roles relative to required e
 <!-- TODO your screenshot: ![Years of experience vs offered salary](images/05-experience-vs-salary.png) -->
 <img width="1133" height="592" alt="Avg of Avg Pay and Ex year" src="https://github.com/user-attachments/assets/fe43c526-858c-4adb-b6e9-063cf5df2704" />
 
-- Obviously, the higher the position that doesn't mean the higher the salary. **However**, because over 93% of Max and Min pay entries were missing/null, these pay averages represent a limited sample and should be interpreted with caution rather than drawn as definitive industry conclusions.
+- Obviously, the longer of the experience years that doesn't mean the higher the salary. **However**, because over 93% of Max and Min pay entries were missing/null, these pay averages represent a limited sample and should be interpreted with caution rather than drawn as definitive industry conclusions.
 
 ## Step 2: Skills & Industry Analysis
 
